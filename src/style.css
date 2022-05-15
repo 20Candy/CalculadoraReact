@@ -1,0 +1,104 @@
+body {
+  background: #000;
+}
+
+.calculator {
+  margin-top: 20px;
+  align-content: flex-start;
+  align-items: flex-start;
+  background-color: #202020;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
+  height: 520px;
+  justify-content: flex-start;
+  margin: 100px auto;
+  overflow: hidden;
+  width: 340px;
+}
+
+.calculator button {
+  border: 0;
+  cursor: pointer;
+  display: block;
+  font-size: 32px;
+  font-weight: 300;
+  height: 85px;
+  line-height: 85px;
+  margin-left: 0;
+  padding: 0;
+  text-align: center;
+  width: 85px;
+  transition: opacity .2s ease-out;
+  font-family: 'Roboto', sans-serif;
+}
+
+.calculator button:hover{
+  opacity: .9;
+}
+
+.calculator button:active, .calculator button.active{
+  opacity: .8;
+}
+
+.calculator-displayPrevios {
+  background-color:#424346;
+  color:#CDCDCD ;
+  width: 340px;
+  height: 30px;
+  text-align: right;
+  font-size:30px;
+
+}
+
+.calculator-displayLast {
+  background-color:#424346;
+  color:white;
+  width: 340px;
+  height: 70px;
+  text-align: right;
+  font-size:65px;
+
+}
+
+.calculator-keyboard_container_numbers {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+button.calculator-keyboard_number_key {
+  background-color: #c7c7c7;
+  color: #424346;
+  outline: 1px solid #949599;
+}
+
+button.calculator-keyboard_operator_key_cero {
+    background-color: #c7c7c7;
+    color: #424346;
+    outline: 1px solid #949599;
+    width: 170px;
+}
+
+button.calculator-keyboard_operator_key {
+  background-color: #f98410; 
+  color: white;
+  flex-grow: 1;
+  font-size: 36px;
+  outline: 1px solid #ca5200;
+  font-weight: 100;
+}
+
+.calculator-keyboard_operator_key_Grey {
+  background-color: #afb0b5;
+  font-size: 26px;    
+  color: black;
+  flex-grow: 1;
+  font-size: 36px;
+  outline: 1px solid #949599;
+  font-weight: 100;
+}
