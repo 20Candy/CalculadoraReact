@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import NumberButton from './number/number'
 import Operation from './operations/operations'
+import Resultado from './operations/calculos'
 
 function App() {
     const [result, setResult] = useState('')
@@ -39,57 +40,8 @@ function App() {
     }
 
     const getResult = () => {
-        switch (currenOperator) {
-        case '+':
-            resul = (Number(number1) + Number(number2))
-
-            if (resul > 999999999) {
-                setResult('ERROR')
-            } else {
-                resul = String((Number(number1) + Number(number2)))
-                setResult(resul.substring(0, 9))
-            }
-
-            break
-        case '-':
-            resul = (Number(number1) - Number(number2))
-            if (resul < 0) {
-                setResult('ERROR')
-            } else {
-                resul = String((Number(number1) - Number(number2)))
-                setResult(resul.substring(0, 9))
-            }
-
-            break
-        case '*':
-            resul = (Number(number1) * Number(number2))
-
-            if (resul > 999999999) {
-                setResult('ERROR')
-            } else {
-                resul = String((Number(number1) * Number(number2)))
-                setResult(resul.substring(0, 9))
-            }
-            break
-
-        case '/':
-            if (number2 === '0') {
-                setResult('ERROR')
-            } else {
-                resul = String((Number(number1) / Number(number2)))
-                setResult(resul.substring(0, 9))
-            }
-
-            break
-
-        case '%':
-            resul = String((Number(number1) % Number(number2)))
-            setResult(resul.substring(0, 9))
-            break
-
-        default:
-            break
-        }
+        console.log(Resultado(number1,number2,currenOperator))
+        setResult(Resultado(number1,number2,currenOperator))
     }
 
     return (

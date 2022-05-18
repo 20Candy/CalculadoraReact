@@ -1,23 +1,23 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import '@testing-library/jest-dom'
-import App from './App'
+import Resultado from './operations/calculos'
+  
+describe('Given a number', () => {
+    it('div', () => {
+      expect(Resultado('4', '2', '/')).toBe('2')
+      expect(Resultado('4', '0', '/')).toBe('ERROR')
+    })
+    it('mult', () => {
+      expect(Resultado('4', '2', "*")).toBe('8')
+    })
+    it('sum', () => {
+      expect(Resultado('4', '2', '+')).toBe('6')
+    })
+    it('subs', () => {
+      expect(Resultado('4', '2','-')).toBe('2')
+    })
+    it('mod', () => {
+      expect(Resultado('5', '5', '%')).toBe('0')
+    })
+  })
 
-it('Carga UI', () => {
-    render(<App />)
-})
-
-it('Botón añade número a la pantalla', async () => {
-    render(<App />)
-
-    const element = screen.getByText('1')
-    expect(element).toBeInTheDocument()
-
-    await userEvent.click(element)
-    expect(screen.getByDisplayValue('1')).toBeInTheDocument()
-
-    await userEvent.click(element)
-    expect(screen.getByDisplayValue('11')).toBeInTheDocument()
-})
+  
 
